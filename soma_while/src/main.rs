@@ -15,7 +15,7 @@ fn main() {
     let mut int_input_value = convert_to_int(&input_value);
 
     while int_input_value != 0 {
-        let mut r = int_input_value % 10;
+        let r = int_input_value % 10;
         sum = sum + r;
         int_input_value = int_input_value / 10;
     }
