@@ -1,12 +1,12 @@
 fn main() {
     let s1 = String::from("texto");
-    let (s2, tamanho) = calcula_tamanho(s1);
-    println!("O tamanho de {} é {}", s2, tamanho)
+    let tamanho = calcula_tamanho(&s1);
+    println!("O tamanho de {} é {}", s1, tamanho)
 }
 
-// Fazendo a função devolver o valor de uma variável repassado como
-// parâmetro para que possamos usar ele em outro lugar
-fn calcula_tamanho(s: String) -> (String, usize) {
-    let tamanho = s.len();
-    (s, tamanho)
+// Uma forma de como você poderia definir e usar uma função
+// calcula_tamanho que recebe uma referência para um objeto como
+// parâmetro, em vez de pegar este valor para si:
+fn calcula_tamanho(s: &String) -> usize {
+    s.len()
 }
